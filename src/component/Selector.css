@@ -1,0 +1,19 @@
+.desplegar-opciones {
+    height: 120px;
+    width: 800px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.opcion-desplegada{
+    display: flex;
+    flex-direction: row;
+}
+
+.opcion-desplegada img {
+    height: 30px;
+    width: 30px;
+}
