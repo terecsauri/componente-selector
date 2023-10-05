@@ -32,7 +32,7 @@ export const Selector = () => {
     setAbierto(!abierto);
   };
 
-  const seleccionar = (datita) => {
+  const seleccionar = (datita: { id: any; nombre?: string; foto?: string; }) => {
     setValor(datita.id);
     setAbierto(false);
   };
@@ -46,7 +46,11 @@ export const Selector = () => {
         {abierto && (
           <div className="desplegar-opciones">
             {data.map((datita) => (
-              <div className="opcion-desplegada" key={datita.id} onClick={() => seleccionar(datita)}>
+              <div
+                className="opcion-desplegada"
+                key={datita.id}
+                onClick={() => seleccionar(datita)}
+              >
                 <img src={datita.foto} />
                 {datita.nombre}
               </div>
@@ -54,7 +58,6 @@ export const Selector = () => {
           </div>
         )}
       </div>
-      
     </div>
   );
 };
